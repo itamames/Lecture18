@@ -36,19 +36,19 @@ union(x,y) - combine the two sets containing x and y into one new set. A new rep
 
 Let S = {1,2,3,4,5,6,7,8,9}
 
-Let initial partition be (make-set(x), for each x in S): 
+Let initial partition be (make-set(x), for each x in S): (representative elements will be underlined)
 
 {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}
 
 union(2,5):
 
-{1}, {2, 5}, {3}, {4}, {6}, {7}, {8}, {9}
+{1}, {<u>2</u>, 5}, {3}, {4}, {6}, {7}, {8}, {9}
 
 find(4) = 4, find(2) = 2, find(5) = 2
 
-union(4,6), union(2,7)
+union(6, 4), union(2,7)
 
-{1}, {2, 5, 7}, {3}, {4, 6}, {8}, {9}
+{1}, {<u>2</u>, 5, 7}, {3}, {4, <u>6</u>}, {8}, {9}
 
 find(4) = 6, find(2) = 2, find(5) = 2
 
@@ -56,7 +56,7 @@ union(2,6)
 
 Disjointed set:
 
-{1}, {2, 4, 5, 6, 7}, {3}, {8}, {9}
+{1}, {<u>2</u>, 4, 5, 6, 7}, {3}, {8}, {9}
 
 ## Example #2
 
