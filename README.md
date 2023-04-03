@@ -134,6 +134,7 @@ At the end of the algorithm, everything is connected, and we are done.
 
 
 ![Graph](images/UF9.png)
+
 ## The algorithm
 
 ```text
@@ -178,7 +179,8 @@ find(x)
 	while (x != “empty” parent)
 	     x = x -> parent;
 	return x;
-```				
+```
+
 find(7) = 4
 
 ![Graph](images/UF11.png)
@@ -194,7 +196,9 @@ Change root of one to have parent be the root of the other
 Example:
 
 Before…
+
 ![Graph](images/UF12.png)
+
 After union(4,6)
 
 ![Graph](images/UF10.png)
@@ -236,6 +240,7 @@ public void union(int root1, int root2)
 Strategy: Always point the smaller tree (by total number of nodes) to the root of the larger tree
 
 ![Graph](images/UF14.png)
+
 ```java
 public void union (int root1, int root2) 
 {
